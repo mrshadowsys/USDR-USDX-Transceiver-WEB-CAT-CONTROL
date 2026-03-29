@@ -1,4 +1,4 @@
-USDX Remote HF Transceiver Control – ESP32-C3
+USDX Remote HF Transceiver Control – ESP32-C3 supermini
 
 Description:
 This project provides a remote web interface for controlling a USDX HF transceiver via an ESP32-C3. It supports full CAT control, frequency tuning, mode selection, relay control, presets, and live logging of commands from connected devices. Designed for multi-user remote operation on a local network, it features a realistic control panel UI with neon-green displays and buttons.
@@ -37,3 +37,10 @@ Connect relays and CAT interface to your transceiver
 Connect ESP32 to your WiFi network
 Access the web interface via http://<ESP32_IP>
 Control frequencies, modes, relays, and view live command logs
+
+Function	Pin	Description
+CAT RX	3	UART receive pin on ESP32 → connect to transceiver TX
+CAT TX	4	UART transmit pin on ESP32 → connect to transceiver RX
+Status LED	8	Onboard LED for heartbeat/connection indication
+UHF Relay	5	Controls UHF link relay (HIGH = relay active / ON)
+Antenna Relay	6	Switches antenna 1 ↔ antenna 2 (HIGH = ANT2 selected)
